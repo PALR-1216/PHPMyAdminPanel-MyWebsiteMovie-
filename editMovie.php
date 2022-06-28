@@ -43,7 +43,7 @@ if(!isset($_SESSION['AdminId'])){
   <button type="submit" class="btn btn-primary">Update Data</button>
 </form>
 
-	  <img src="<?php echo $_GET['movieImage']?>" width=400 height=550/>
+	  <img src="https://image.tmdb.org/t/p/w500<?php echo $_GET['movieImage']?>" width=400 height=550/>
 
 
 <?php
