@@ -1,5 +1,6 @@
 <?php
 ob_start();
+include "conn.php";
 
 ?>
 
@@ -41,6 +42,13 @@ ob_start();
         </li>  
         
       </ul>
+
+      <!-- <form class="d-flex" method="Get">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searchValue">
+      </form> -->
+
+
+
       <form class="d-flex" method="POST">
         <button class="btn btn-outline-success" type="submit" name="logOut">LogOut</button>
       </form>
@@ -61,6 +69,18 @@ if(isset($_POST['logOut'])) {
 	session_destroy();
 	header('location:index.php');
 }
+
+
+// if(isset($_GET['searchValue'])) {
+//   // echo "select * from allshows where showName like '%", $_GET['searchValue'], "%'";
+//   $sql = "select * from allshows where ShowName like '%" . $_GET['searchValue'] . "%'";
+
+
+
+// }
+
+
+
 
 ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

@@ -17,7 +17,7 @@ $resultSet = mysqli_query($con, $sqlQuery) or die("database error:". mysqli_erro
 		<tr>
 			<th>Id</th>
 			<th>Name</th>
-			<th>Image</th>	
+			<th>Season</th>
 			<th>Action</th>
 			
 		</tr>
@@ -25,8 +25,8 @@ $resultSet = mysqli_query($con, $sqlQuery) or die("database error:". mysqli_erro
 	<tbody>
 		<?php while( $row = mysqli_fetch_assoc($resultSet) ) { ?>
 		   <td id="<?php echo $row ['ShowId']; ?>"> <?php echo $row['ShowId']; ?> </td> 
-		   <td><?php echo $row ['ShowName']; echo " Season "; echo $row['Seasons'];?></td>
-		   <td><?php echo $row ['ShowImage']; ?></td>
+		   <td><?php echo $row ['ShowName']?></td>
+		   <td><?php echo $row['Seasons'];?></td>
 		<td><a href='editEpisodes.php?Id=<?php echo $row['ShowId'] ;?>'>Edit Episodes or <a href="editShows.php?showName=<?php echo $row['ShowName']?>&showImage=<?php echo $row['ShowImage'] ?>&ShowId=<?php echo $row['ShowId']?>">Edit Show</td>
 			
 			
